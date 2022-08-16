@@ -10,8 +10,7 @@ public class MicroservicesURLs {
 	public static String LOGIN_CREATE_TOKEN = LOGIN + "/createToken";
 	public static String LOGIN_VALIDATE_TOKEN = LOGIN + "/validateToken";
 
-	public static String USER = EnvironmentService.USER_SERVER_URL + EnvironmentService.USER_SERVER_PORT + "/user"
-			+ EnvironmentService.USER_SERVER_VERSION;
+	public static String USER = EnvironmentService.USER_SERVER_URL + EnvironmentService.USER_SERVER_PORT + "/user" + EnvironmentService.USER_SERVER_VERSION;
 	public static String USER_RETRIEVE_BY_EMAIL_AND_PASSWORD = USER + "/retrieve/byEmailAndPassword";
 	public static String USER_CREATE = USER + "/create";
 	public static String USER_RETRIEVE_USERS = USER + "/retrieve";

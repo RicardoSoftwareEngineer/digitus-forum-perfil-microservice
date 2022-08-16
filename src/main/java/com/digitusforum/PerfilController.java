@@ -1,4 +1,4 @@
-package com.digitusforum.perfil;
+package com.digitusforum;
 
 import java.util.List;
 
@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.digitusforum.perfil.PerfilEntity;
+import com.digitusforum.perfil.PerfilService;
+import com.digitusforum.perfil.PerfilVO;
 
 @RestController
 public class PerfilController {

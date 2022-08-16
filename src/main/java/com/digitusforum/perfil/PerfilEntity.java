@@ -15,19 +15,19 @@ public class PerfilEntity {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-	private String id;
+	private String perfilId;
 	private String userId;
 	private LocalDateTime lastTimeUsed;
 	private String name;
 	private String type;
 	private boolean deleted;
 
-	public String getId() {
-		return id;
+	public String getPerfilId() {
+		return perfilId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setPerfilId(String perfilId) {
+		this.perfilId = perfilId;
 	}
 
 	public String getUserId() {
@@ -53,10 +53,6 @@ public class PerfilEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
-
 
 	public String getType() {
 		return type;

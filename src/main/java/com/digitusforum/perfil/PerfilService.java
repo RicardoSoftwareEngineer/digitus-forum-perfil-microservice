@@ -32,7 +32,7 @@ public class PerfilService {
 		requestService.userExists(perfilVO.getUserId());
 		PerfilEntity perfil = modelMapper.map(perfilVO, PerfilEntity.class);
 		perfil = perfilRepository.save(perfil);
-		perfilVO.setId(perfil.getId().toString());
+		perfilVO.setPerfilId(perfil.getPerfilId().toString());
 		return perfilVO;
 	}
 
@@ -52,7 +52,7 @@ public class PerfilService {
 	}
 
 	public PerfilEntity retrieveByIdAndUserId(String id, String userId) {
-		PerfilEntity perfil = perfilRepository.findByUserIdAndIdAndDeletedIsFalse(userId, id);
+		PerfilEntity perfil = perfilRepository.findByUserIdAndPerfilIdAndDeletedIsFalse(userId, id);
 		if (perfil == null)
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, M.PERFIL_NOT_FOUND);
 
@@ -85,7 +85,7 @@ public class PerfilService {
 		if (perfilFromDB.isEmpty())
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, M.PERFIL_NOT_FOUND);
 
-		perfilVO.setId(id);
+		perfilVO.setPerfilId(id);
 		PerfilEntity perfil = perfilRepository.save(modelMapper.map(perfilVO, PerfilEntity.class));
 		return perfilVO;
 	}

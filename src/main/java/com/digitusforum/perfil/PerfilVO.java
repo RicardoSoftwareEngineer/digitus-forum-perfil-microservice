@@ -1,17 +1,19 @@
 package com.digitusforum.perfil;
 
 public class PerfilVO {
-	private String id;
+	private String perfilId;
 	private String userId;
 	private String type;
 	private String name;
 
-	public String getId() {
-		return id;
+	
+
+	public String getPerfilId() {
+		return perfilId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setPerfilId(String perfilId) {
+		this.perfilId = perfilId;
 	}
 
 	public String getUserId() {
