@@ -19,7 +19,7 @@ MS **interno** (porta `8088`). Perfil é a “cara” do user (aluno pode ter ma
 ## INV
 - INV-PERFIL-1: perfil persistido: `perfilId`, `userId`, `name`, `type`, `lastTimeUsed`, `deleted`.
 - INV-PERFIL-2: perfil **pertence** a um `userId`. `belongToUser` é a pergunta canônica (retorna o perfil se a dupla id+userId existe).
-- INV-PERFIL-3: `lastUsed` é o perfil mais recente daquele user.
+- INV-PERFIL-3: produto quer um “último perfil usado”. Código hoje: `lastTimeUsed` **nunca é escrito**; `retrieveLastUsed` devolve o primeiro da lista ou **cria** um perfil default (`aluno novo` / `STUDENT`).
 - INV-PERFIL-4: sem borda `/firewall/perfil/...` hoje. Só outros MS chamam.
 
 ## NÃO
